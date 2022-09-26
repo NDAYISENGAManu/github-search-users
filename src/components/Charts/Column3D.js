@@ -26,9 +26,12 @@ const ChartComponent = ({data}) => {
       // Chart Configuration
       chart: {
         //Set the chart caption
-        caption: "Languages",
-        decimals: 0,
-        theme: "fusion",
+        caption: "Most Popular",
+        yAxisName: "Stars",
+        xAxisName: "Repository",
+        xAxisNameFontSize: "16px",
+        yAxisNameFontSize: "16px",
+        theme: "candy",
         columnRadius: '45%'
         // paletteColors: '#f0db4f',
       },
