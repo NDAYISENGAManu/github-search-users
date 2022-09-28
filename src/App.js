@@ -6,10 +6,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path='/' exact={true}>
+        <PrivateRoute path='/' exact={true}>
           <Dashboard />
-        </Route>
-        <Route path='/login'>
+        </PrivateRoute>
+        <Route path='/Login'>
           <Login />
         </Route>
         <Route path='*' exact={false}>
