@@ -6,11 +6,20 @@ import * as serviceWorker from './serviceWorker';
 import { GithubProvider } from './context/context';
 import { Auth0Provider } from '@auth0/auth0-react';
 
+// dev-qlf68ptv.us.auth0.com    === for Domain
+// OeNR8IqJY83E5pHJ4tdjWBQ9OFCMOnZh   === for Client Id
+
 ReactDOM.render(
   <React.StrictMode>
-    <GithubProvider>
-      <App />
-    </GithubProvider>
+    <Auth0Provider
+      domain="dev-qlf68ptv.us.auth0.com"
+      clientId="OeNR8IqJY83E5pHJ4tdjWBQ9OFCMOnZh"
+      redirectUri={window.location.origin}
+    >
+      <GithubProvider>
+        <App />
+      </GithubProvider>
+    </Auth0Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
