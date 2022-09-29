@@ -3,7 +3,7 @@ import mockUser from './mockData.js/mockUser';
 import mockRepos from './mockData.js/mockRepos';
 import mockFollowers from './mockData.js/mockFollowers';
 import axios from 'axios';
-import { async } from 'q';
+// import { async } from 'q';
 
 const rootUrl = 'https://api.github.com';
 
@@ -27,8 +27,7 @@ const GithubProvider = ({children}) => {
         toggleError();  // to remove the error msg once new search load
         // console.log(user);
         setIsLoading(true);
-        const response = await axios(`${rootUrl}/users/${user}`).
-        catch (err => 
+        const response = await axios(`${rootUrl}/users/${user}`).catch (err => 
             console.log(err)
         );
         

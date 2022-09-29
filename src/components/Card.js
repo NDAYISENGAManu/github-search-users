@@ -9,7 +9,7 @@ const Card = () => {
   return (
     <Wrapper>
       <header>
-        <img src={avatar_url} />
+        <img src={avatar_url} alt={name} />
         <div> 
           <h4>{name}</h4>
           <p>@{twitter_username || 'No twitter account'}</p>
